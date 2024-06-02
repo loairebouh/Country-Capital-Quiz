@@ -15,7 +15,13 @@ const port = 4000;
 
 db.connect();
 
-let quiz = [];
+let quiz = [
+	{
+		country: "Afghanistan",
+		capital: "Kabul",
+	},
+];
+
 db.query("SELECT * FROM capitals", (err, res) => {
 	if (err) {
 		console.error("Error executing query", err.stack);
